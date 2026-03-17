@@ -3,7 +3,8 @@ package main
 import (
 	"fmt"
 )
-
+//error is of type built in interface in go, it has only one method Error() string
+// we can create our own custom error type by implementing the Error() method of the error interface
 func sendSMSToCouple(msgToCustomer, msgToSpouse string) (float64, error) {
 	cost, err := sendSMS(msgToCustomer)
 	if err != nil {

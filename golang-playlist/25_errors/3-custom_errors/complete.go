@@ -26,6 +26,11 @@ func divide(dividend, divisor float64) (float64, error) {
 		// as an error. As an error type, when it's printed its default value
 		// will be the result of the Error() method
 		return 0, divideError{dividend: dividend}
+
+		// can also return like this 
+		// return 0, &divideError{dividend: dividend} // using pointer receiver for divideError struct 
+		// as error is interface , so can implement it with pointer receiver or value receiver, both will work, 
+		// but generally we use pointer receiver for methods, so we can use pointer receiver for divideError struct as well
 	}
 	return dividend / divisor, nil
 }

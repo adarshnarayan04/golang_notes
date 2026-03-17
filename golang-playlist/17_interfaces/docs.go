@@ -43,7 +43,7 @@ func measure(g geometry) {
 }
 
 func detectCircle(g geometry) {
-	if c, ok := g.(circle); ok {
+	if c, ok := g.(circle); ok { // type assertion ( checking if g is of type circle)
 		fmt.Println("circle with radius", c.radius)
 	}
 	//g.(circle) //checking type of g is circle ( like done in switch , i.(type))
@@ -58,4 +58,12 @@ func main() {
 
 	detectCircle(r)
 	detectCircle(c)
+
+	fmt.Print(r)
+	//it call the String() method of rect struct if it is implemented, if not then it will print the default struct format ( {width:3 height:4} )
+	// so we can implement the String() method of rect struct to print it in our desired format
+	// ex: func (r rect) String() string {
+	// 	return fmt.Sprintf("rect with width %.2f and height %.2f", r.width, r.height)
+	// }
+	// fmt.Print(r) // it will call the String() method of rect struct and print the desired format
 }
