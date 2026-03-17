@@ -22,6 +22,13 @@ func main() {
 	// 	A pointer type (*MyStruct) has:
 	// methods with value receivers
 	// methods with pointer receivers
+
+	var a any;
+	a = "hello"
+	fmt.Printf(a.(type))
+
 }
 // Generally , we always use pointer receiver for methods, because it allows us to modify the original struct and 
 // also avoids unnecessary copying of the struct when the method is called.
+// so for implementing an interface , we generally use pointer receiver, 
+// because it allows us to implement both value and pointer methods, and also allows us to modify the original struct if needed.

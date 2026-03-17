@@ -29,7 +29,7 @@ func main() {
 
 	// type switch
 	// whoAmI := func(i interface{}) {
-	// 	switch i.(type) {
+	// 	switch i.(type) { // type switch ( can only be inside switch statement with interface type)
 	// 	case int:
 	// 		fmt.Println("its an integer")
 	// 	case string:
@@ -42,5 +42,20 @@ func main() {
 	// }
 
 	// whoAmI(55)
+
+	//for normal type assertion 
+
+	// var a any
+	// a = "hello"
+	// str, ok := a.(string) // type assertion ( can be used anywhere)
+
+	//if not used of 'ok' then it will panic if type assertion fails
+	// str := a.(string) // panic if a is not a string
+	
+	// if ok {
+	// 	fmt.Println("a is a string:", str)
+	// } else {
+	// 	fmt.Println("a is not a string")
+	// }
 
 }
