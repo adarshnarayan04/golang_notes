@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 )
+
 // if you don't set any field, default value is zero value
 // int => 0, float => 0, string "", bool => false
-
 
 // order struct
 
@@ -21,7 +21,7 @@ type order struct {
 	amount    float32
 	status    string
 	createdAt time.Time // nanosecond precision
-	customer // embedded struct (https://gobyexample.com/struct-embedding)
+	customer            // embedded struct (https://gobyexample.com/struct-embedding)
 	//customer customer// named field
 }
 
@@ -37,7 +37,6 @@ type order struct {
 // No promotion.
 // Access: only newOrder.customer.name (newOrder.name does not compile).
 
-
 // func newOrder(id string, amount float32, status string) *order {
 // 	// initial setup goes here...
 // 	myOrder := order{
@@ -52,7 +51,7 @@ type order struct {
 // // receiver type
 // this are methods of order struct ( to acess it order.methodName())
 // can write any name ( but first letter should be same as struct name first letter by convention)
-//so (o *order) 
+//so (o *order)
 
 //as we want to change the original struct, we use pointer receiver if not then (o order)
 // func (o *order) changeStatus(status string) {
@@ -93,7 +92,6 @@ func main() {
 
 	// myOrder := newOrder("1", 30.50, "received")
 	// fmt.Println(myOrder.amount)
-
 
 	// myOrder := order{
 	// 	id:     "1",

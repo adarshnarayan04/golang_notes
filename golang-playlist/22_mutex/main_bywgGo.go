@@ -16,7 +16,6 @@ func (p *post) inc() {
 		//so that when function exits , lock is released
 	}()
 
-
 	//use Lock only for critical section
 	//as it create bottleneck , as other goroutines have to wait for lock to be released
 	p.mu.Lock()
@@ -30,7 +29,7 @@ func main() {
 	myPost := post{views: 0}
 
 	for i := 0; i < 100; i++ {
-		wg.Go( func(){
+		wg.Go(func() {
 			myPost.inc()
 		})
 

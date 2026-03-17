@@ -47,7 +47,7 @@ func fileDefer() {
 }
 
 // --- Example 4: Arguments evaluated immediately ---
-//only argumnets are evaluated immediately, not the function itself
+// only argumnets are evaluated immediately, not the function itself
 func argDefer() {
 	x := 10
 	defer fmt.Println("Deferred value of x:", x)

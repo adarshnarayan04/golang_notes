@@ -1,10 +1,11 @@
 package main
+
 import "fmt"
 
 //Arrays are value types.
 //b = a copies the entire array
 
-//when pass to functon, it creates a copy of the array
+// when pass to functon, it creates a copy of the array
 // numbered sequence of specific length
 func main() {
 	// zeroed values
@@ -33,11 +34,8 @@ func main() {
 	// nums := [2][2]int{{3, 4}, {5, 6}}
 	// fmt.Println(nums)
 
-	//var nums [2]; -> have to specify the type 
+	//var nums [2]; -> have to specify the type
 	//fmt.Println(nums)
-
-
-
 
 	// - fixed size, that is predictable
 	// - Memory optimazation

@@ -7,6 +7,7 @@ import (
 	"github.com/codersgyan/podcast/user"
 	"github.com/fatih/color"
 )
+
 //to import our own package
 // first we need to initialize a module using "go mod init <module-name>"
 //generally module name is the repository path where the code will be hosted
@@ -24,7 +25,7 @@ import (
 //go.sum is created when we use external packages to ensure the integrity of the packages
 //it contains the checksums of the packages
 
-//to automatically download all the dependencies mentioned in go.mod file use "go mod tidy"
+// to automatically download all the dependencies mentioned in go.mod file use "go mod tidy"
 // like npm install in nodejs
 func main() {
 	auth.LoginWithCredentials("codersgyan", "secret")

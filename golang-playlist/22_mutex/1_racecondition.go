@@ -33,7 +33,7 @@ func main() {
 	myPost := post{views: 0}
 
 	for i := 0; i < 100; i++ {
-		wg.Go(func(){
+		wg.Go(func() {
 			myPost.inc()
 		})
 		// go myPost.inc(&wg)

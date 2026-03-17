@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-
 // goroutine synchronizer
 func task(done chan bool) {
 	defer func() { done <- true }()
@@ -28,4 +27,3 @@ func main() {
 	//else use sync.WaitGroup for multiple goroutines
 
 }
-

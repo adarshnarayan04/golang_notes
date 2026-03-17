@@ -5,7 +5,7 @@ func main() {
 
 	//no need of break statement in go
 	//it automatically break after executing one case
-	
+
 	// i := 3
 	// switch i {
 	// case 1:

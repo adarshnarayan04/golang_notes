@@ -5,8 +5,8 @@ import (
 	"time"
 )
 
-//emailChan <-chan string : receive only channel ( can only receive data from channel)
-//done chan<- bool : send only channel ( can only send data to channel)
+// emailChan <-chan string : receive only channel ( can only receive data from channel)
+// done chan<- bool : send only channel ( can only send data to channel)
 // test chan string : bidirectional channel ( can send and receive data)
 func emailSender(emailChan <-chan string, done chan<- bool) {
 	defer func() { done <- true }()
@@ -20,7 +20,7 @@ func emailSender(emailChan <-chan string, done chan<- bool) {
 func main() {
 
 	emailChan := make(chan string, 100) //also act as queue like structure
-	done := make(chan bool) //used of synchronization between goroutines
+	done := make(chan bool)             //used of synchronization between goroutines
 
 	go emailSender(emailChan, done)
 
@@ -37,9 +37,4 @@ func main() {
 	//else it will keep looping forever waiting for more data
 	// so defer will not execute and main goroutine will wait forever on <-done causing deadlock
 
-
-
-
-
 }
-

@@ -23,7 +23,7 @@ func hello(w http.ResponseWriter, req *http.Request) {
 	case <-time.After(10 * time.Second):
 		// If 10 seconds pass without cancellation, send a normal response.
 		fmt.Fprintf(w, "hello\n")
-	case <-ctx.Done()://ctx.Done() is a receive-only channel provided by the context implementation(package). It is closed by the context itself when it is canceled or times out.
+	case <-ctx.Done(): //ctx.Done() is a receive-only channel provided by the context implementation(package). It is closed by the context itself when it is canceled or times out.
 		//Wait for a few seconds before sending a reply to the client. This could simulate some work the server is doing. While working, keep an eye on the context’s Done() channel for a signal that we should cancel the work and return as soon as possible.
 		// ctx.Done() returns a channel that's closed when the context is canceled
 		// (for example, if the client disconnects or cancels the request).

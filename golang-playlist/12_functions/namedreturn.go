@@ -51,7 +51,7 @@ func getCountWithDefer() (count int) {
 func shadowingRisk() (value int) {
 	value = 10
 	if true {
-		value := 20                 // New inner variable named 'value', shadows the return variable
+		value := 20                  // New inner variable named 'value', shadows the return variable
 		fmt.Println("Inner:", value) // Prints 20
 	}
 	return // Returns 10 (the outer named variable), NOT 20
@@ -61,7 +61,7 @@ func shadowingRisk() (value int) {
 // If you use `_` as a name in the return signature, you strictly CANNOT use naked returns.
 // You must explicitly return values.
 
-//_ , we use this to tell , we are not going to need this variable ( no need to assign any name to it)
+// _ , we use this to tell , we are not going to need this variable ( no need to assign any name to it)
 // but the data is still returned.
 func mixedNamedReturn() (total int, _ string) {
 	total = 100
@@ -117,8 +117,8 @@ func main() {
 	fmt.Println("Mixed result:", t, s)
 
 	fmt.Println("\n--- Example 5: Explicit Return Override ---")
-	fmt.Println("Input 10 ->", explicitReturnOverride(10))   // Returns 20 (result)
-	fmt.Println("Input 60 ->", explicitReturnOverride(60))   // Returns 0 (explicit override)
+	fmt.Println("Input 10 ->", explicitReturnOverride(10)) // Returns 20 (result)
+	fmt.Println("Input 60 ->", explicitReturnOverride(60)) // Returns 0 (explicit override)
 
 	fmt.Println("\n--- Example 6: Explicit Return + Defer ---")
 	resDefer := explicitReturnWithDefer()

@@ -1,30 +1,30 @@
 package main
 
 import (
-    "fmt"
-    "sync"
-    //"time"
+	"fmt"
+	"sync"
+	//"time"
 )
 
 func worker(id int) {
-    fmt.Printf("Worker %d starting\n", id)
+	fmt.Printf("Worker %d starting\n", id)
 
-    //time.Sleep(time.Second)
-    fmt.Printf("Worker %d done\n", id)
+	//time.Sleep(time.Second)
+	fmt.Printf("Worker %d done\n", id)
 }
 
 func main() {
 
-    var wg sync.WaitGroup
+	var wg sync.WaitGroup
 
-    for i := 1; i <= 5; i++ {
+	for i := 1; i <= 5; i++ {
 		//new way ( not need to use defer wg.done() and wg.Add(1))
 
-        wg.Go(func() {
-            worker(i)
-        })
-    }
+		wg.Go(func() {
+			worker(i)
+		})
+	}
 
-    wg.Wait()
+	wg.Wait()
 
 }

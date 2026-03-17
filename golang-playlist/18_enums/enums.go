@@ -6,12 +6,12 @@ import "fmt"
 
 type OrderStatus string
 
-//cont () block to define multiple related constants
+// cont () block to define multiple related constants
 const (
 	Received  OrderStatus = "received"
-	Confirmed     OrderStatus = "confirmed"
-	Prepared     OrderStatus = "prepared"
-	Delivered      OrderStatus = "delivered"
+	Confirmed OrderStatus = "confirmed"
+	Prepared  OrderStatus = "prepared"
+	Delivered OrderStatus = "delivered"
 )
 
 func changeOrderStatus(status OrderStatus) {

@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 //refrece data type
@@ -13,7 +14,7 @@ import "fmt"
 // + useful methods
 // we declaire slice using [] , as it is dynamic we dont specify size
 
-//when pass to function it pass the reference not copy of slice ( as it is reference type)
+// when pass to function it pass the reference not copy of slice ( as it is reference type)
 func main() {
 	// uninitialized slice is nil ( as it size is not defined , so when we declare it, it does not point to any underlying array in heap)
 	// var nums []int
@@ -21,14 +22,13 @@ func main() {
 	// means nums does not point to any underlying array(in heap).
 	//to make it point to array(heap) we have assign it num
 
-
 	// fmt.Println(nums == nil)
 	// fmt.Println(len(nums))
 
 	// var s []int       // nil slice
-    // s2 := []int{}     // empty slice
+	// s2 := []int{}     // empty slice
 	//it create empty slice , also s2 is initialized and points to underlying array in heap
-    // s3 := make([]int, 0)
+	// s3 := make([]int, 0)
 
 	//by make -> we can create slice, map ... as they are reference types
 	// make -> allocates memory in heap and returns the reference to it
@@ -80,13 +80,12 @@ func main() {
 	// var nums = [][]int{{1, 2, 3}, {4, 5, 6}}
 	// fmt.Println(nums)
 
-	var s []int       // nil slice
-	s2 := []int{}  // empty slice
+	var s []int   // nil slice
+	s2 := []int{} // empty slice
 	//s4 := []int   //:= both declares and initializes a variable — and []int by itself is only a type, not a value.
 	// that why this give error
 	s3 := make([]int, 0)
 
 	fmt.Println(s, s2, s3)
-
 
 }

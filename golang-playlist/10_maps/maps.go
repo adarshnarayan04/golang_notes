@@ -9,10 +9,10 @@ func main() {
 	// panic: assignment to entry in nil map
 	// as m is nil map , does not point to any underlying data structure in heap
 	// to make it point to underlying data structure we have to use make
-	
+
 	//right way
 	// var m = make(map[string]int)
-	//or 
+	//or
 	//var m map[string]int
 	// m = make(map[string]int) -> it make m point to underlying data structure in heap
 	// or var m= make(map[string]int)
@@ -47,10 +47,9 @@ func main() {
 	// fmt.Println(m)
 
 	//without make
-	// m := map[string]int{} 
+	// m := map[string]int{}
 	// var m= map[string]int{}
 	// as {} initializes the map a, so m points to underlying data structure in heap ,as it is initialized
-
 
 	// m := map[string]int{"price": 40, "phones": 3}
 

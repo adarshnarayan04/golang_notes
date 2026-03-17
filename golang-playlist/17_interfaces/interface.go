@@ -9,14 +9,13 @@ type paymenter interface {
 
 // Open close principle
 type payment struct {
-	
+
 	//gateway razorpay , have to change everytime we want to change
 	//gateway stripe
 
 	// so used interface
 	gateway paymenter
 }
-
 
 func (p payment) makePayment(amount float32) {
 	p.gateway.pay(amount)
@@ -43,7 +42,7 @@ func (f fakepayment) pay(amount float32) {
 
 type paypal struct{}
 
-//paypal implements paymenter interface ( has pay and refund methods )
+// paypal implements paymenter interface ( has pay and refund methods )
 func (p paypal) pay(amount float32) {
 	fmt.Println("making payment using paypal", amount)
 }

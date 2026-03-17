@@ -4,8 +4,6 @@ import (
 	"fmt"
 )
 
-
-
 func main() {
 
 	chan1 := make(chan int)
@@ -33,9 +31,4 @@ func main() {
 		}
 	}
 
-
-
-
-
 }
-

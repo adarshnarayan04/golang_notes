@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var hello =10;
+	var hello = 10
 	fmt.Println(hello)
 	var smsSendingLimit int
 	var costPerSMS float64

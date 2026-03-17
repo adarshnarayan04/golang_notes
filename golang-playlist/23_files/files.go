@@ -21,16 +21,11 @@ func main() {
 	// 	panic(err)
 	// }
 
-
 	// fmt.Println("file name:", fileInfo.Name())
 	// fmt.Println("file or folder:", fileInfo.IsDir())
 	// fmt.Println("file size:", fileInfo.Size())
 	// fmt.Println("file permission:", fileInfo.Mode())
 	// fmt.Println("file modified at:", fileInfo.ModTime())
-
-
-
-
 
 	// read file
 	// f, err := os.Open("golang-playlist/23_files/example.txt")
@@ -65,10 +60,6 @@ func main() {
 
 	// fmt.Println(string(data))
 
-
-
-
-
 	// read folders
 
 	// dir, err := os.Open("../")
@@ -88,10 +79,6 @@ func main() {
 	// 	fmt.Println(fi.Name(), fi.IsDir())
 	// }
 
-
-
-
-
 	// create a file
 	// f, err := os.Create("golang-playlist/23_files/example2.txt")
 	// if err != nil {
@@ -105,10 +92,6 @@ func main() {
 	// bytes := []byte("Hello Golang")
 	// f.Write(bytes)
 	// fmt.Println("file created successfully")
-
-
-
-
 
 	// read and write to another file (streaming fashion)
 
@@ -129,7 +112,7 @@ func main() {
 	reader := bufio.NewReader(sourceFile)
 	writer := bufio.NewWriter(destFile)
 
-	for {//read byte by byte and write to new file
+	for { //read byte by byte and write to new file
 		b, err := reader.ReadByte()
 		//b is a single byte read from the file
 		if err != nil {
@@ -151,11 +134,6 @@ func main() {
 	//use writer.Flush() to ensure all buffered data is written to the underlying file
 
 	fmt.Println("written to new file succesfully")
-
-
-
-
-	
 
 	// delete a file
 

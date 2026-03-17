@@ -5,8 +5,7 @@ import "fmt"
 func counter() func() int {
 	var count int = 0
 
-
-	//anonymous function 
+	//anonymous function
 	return func() int {
 		count += 1
 		return count

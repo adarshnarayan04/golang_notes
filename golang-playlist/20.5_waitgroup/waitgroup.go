@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-//use pointer , so that we can modify the same WaitGroup instance
+// use pointer , so that we can modify the same WaitGroup instance
 func task(id int, w *sync.WaitGroup) {
 	//defer schedules a function call to run at the end of the current function, just before it returns
 	defer w.Done() //w.done() decrements the WaitGroup counter by 1

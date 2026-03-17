@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	emailChan := make(chan string, 100)//buffered channel with capacity of 100
+	emailChan := make(chan string, 100) //buffered channel with capacity of 100
 	// means we can send 100 values without blocking
 	//if the buffer is full, then the sender will block until some space is available in the buffer
 
@@ -20,9 +20,4 @@ func main() {
 
 	//it will not cause deadlock as we are not exceeding the buffer capacity
 
-
-
-
-
 }
-

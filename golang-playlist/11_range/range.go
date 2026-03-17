@@ -6,7 +6,7 @@ import "fmt"
 func main() {
 	nums := []int{6, 7, 8}
 
-	for i:=0; i < len(nums); i++ {
+	for i := 0; i < len(nums); i++ {
 		fmt.Println(nums[i])
 	}
 
@@ -19,7 +19,7 @@ func main() {
 		fmt.Println(num)
 	}
 
-	for  num := range nums {
+	for num := range nums {
 		fmt.Println(num)
 	}
 

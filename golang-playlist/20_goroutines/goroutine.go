@@ -22,5 +22,5 @@ func main() {
 	// because of that all other goroutines will also stop immediately
 	// to avoid that we can add sleep in main goroutine
 
-	time.Sleep(time.Second*2) // if not , then output will be empty
+	time.Sleep(time.Second * 2) // if not , then output will be empty
 }

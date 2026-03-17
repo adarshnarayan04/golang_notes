@@ -81,9 +81,9 @@ func exampleWithTimeout() {
 		resultChan <- "Operation Complete"
 	}()
 
-	select {//select the channel which is ready first
-		// so if we get the resilt from function first we print that
-		// otherwise if context is done (timeout) , then 
+	select { //select the channel which is ready first
+	// so if we get the resilt from function first we print that
+	// otherwise if context is done (timeout) , then
 	case res := <-resultChan:
 		fmt.Println("Success:", res)
 	case <-ctx.Done():

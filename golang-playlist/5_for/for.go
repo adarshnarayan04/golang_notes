@@ -1,6 +1,7 @@
 package main
 
 import "fmt"
+
 // for -> only construct in go for looping
 func main() {
 	// while loop

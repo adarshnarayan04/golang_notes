@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-
 // receive ( as recieve from channel)
 func sum(result chan int, num1 int, num2 int) {
 	numResult := num1 + num2
@@ -19,4 +18,3 @@ func main() {
 	fmt.Println(res)
 
 }
-

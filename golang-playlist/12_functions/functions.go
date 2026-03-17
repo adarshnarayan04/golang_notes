@@ -34,7 +34,7 @@ func main() {
 
 	//IIFE
 	// func() {
-    // fmt.Println("Hello from anonymous function")
+	// fmt.Println("Hello from anonymous function")
 	// }()
 
 	fn := processIt()

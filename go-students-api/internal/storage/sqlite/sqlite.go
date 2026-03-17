@@ -13,7 +13,7 @@ type Sqlite struct {
 	Db *sql.DB
 }
 
-//constructor function ( convention to name it New , can be named anything else too)
+// constructor function ( convention to name it New , can be named anything else too)
 func New(cfg *config.Config) (*Sqlite, error) {
 	db, err := sql.Open("sqlite3", cfg.StoragePath)
 	if err != nil {

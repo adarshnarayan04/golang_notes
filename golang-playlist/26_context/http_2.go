@@ -15,10 +15,10 @@ func simulateWork(ctx context.Context) error {
 		return nil
 	case <-ctx.Done():
 		// Context canceled or deadline exceeded.
-		fmt.Println("work canceled:", ctx.Err()) 
+		fmt.Println("work canceled:", ctx.Err())
 
 		// No, you cannot pass a custom error to ctx.Err().
-		// ctx.Err() is set internally by the context package and only returns standard errors 
+		// ctx.Err() is set internally by the context package and only returns standard errors
 		// like context.Canceled or context.DeadlineExceeded when the context is canceled or times out.
 		return ctx.Err()
 	}
