@@ -14,6 +14,8 @@ type divideError struct {
 }
 
 // Implement the Error() method for divideError struct , so that it satisfies the error interface
+// this method will be called when we print the error of type divideError
+// fmt.Println(err) // it will call the Error() method of divideError struct and print the error message returned by it
 func (de divideError) Error() string {
 	return fmt.Sprintf("can not divide %v by zero", de.dividend)
 }
